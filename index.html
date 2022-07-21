@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container d-flex">
+        <div class="navbar">
+          <div class="logo mr-4">Cybersoft</div>
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#" class="text-light">Form</a>
+          <a href="#">Sport<i class="fa-solid fa-caret-down ml-1"></i></a>
+        </div>
+        <div class="search mt-1">
+          <input type="text" placeholder="Search" id="input-search" />
+          <button class="btn btn-outline-success" id="btn-search">
+            Search
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="product mt-3">
+      <div class="container">
+        <div class="create-product">
+          <div class="link">Home/Products/Create</div>
+          <div class="title mt-2">Create product</div>
+          <div class="product-info">
+            <div class="product-title">Product info</div>
+            <div class="product-desc px-3">
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <p>id</p>
+                    <input
+                      type="text"
+                      id="id"
+                      placeholder="product id"
+                      class="form-control"
+                    />
+                    <p>name</p>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="product name"
+                      class="form-control"
+                    />
+                    <p>price</p>
+                    <input
+                      type="text"
+                      id="price"
+                      placeholder="product price"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <p>image</p>
+                    <input
+                      type="text"
+                      id="img"
+                      placeholder="product image link"
+                      class="form-control"
+                    />
+                    <p>ProductType</p>
+                    <select name="" id="type" class="form-control">
+                      <option>mobile</option>
+                      <option>laptop</option>
+                      <option>tablet</option>
+                    </select>
+                    <p>description</p>
+                    <input
+                      type="text"
+                      id="description"
+                      placeholder="product description"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="button-group">
+              <button class="btn btn-primary" id="btnCreate">Create</button>
+              <button class="btn btn-success" id="btnUpdate">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="result">
+      <div class="container">
+        <div class="table-result">
+          <table class="table mt-3">
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>image</th>
+                <th>name</th>
+                <th>price</th>
+                <th>description</th>
+                <th>type</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="tblProduct"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+      integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./models/Product.js"></script>
+    <script src="./controllers/indexAjax.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
