@@ -32,7 +32,8 @@ document.querySelector("#btnCreate").onclick = function () {
   });
 
   promise.then(function (result) {
-    console.log(result.data);
+    console.log("create", result.data);
+    getListProductApi();
   });
   promise.catch(function (er) {
     console.log(err);
@@ -94,16 +95,18 @@ document.querySelector("#btnUpdate").onclick = function () {
 
 document.querySelector("#btn-search").onclick = function () {
   var productSearch = document.querySelector("#input-search").value;
+  console.log(productSearch);
   var promise = axios({
     url:
       "http://svcy.myclass.vn/api/Product/SearchByName?name=" + productSearch,
     method: "GET",
   });
   promise.then(function (result) {
+    console.log(result);
     renderProduct(result.data);
   });
   promise.catch(function (err) {
-    console.log(err);
+    console.log("Không tìm thấy");
   });
 };
 
